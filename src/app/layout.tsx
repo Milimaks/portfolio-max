@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 const anekTelugu = Anek_Telugu({
-  variable: "--font-anek-telugu",
+  variable: "--font-caption",
   subsets: ["telugu"],
 });
 
