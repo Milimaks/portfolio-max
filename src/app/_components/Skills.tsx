@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Section } from "./Section";
-import { ReactIcon } from "@/components/icons/ReactIcon";
+import { ReactIcon } from "@/app/_components/icons/ReactIcon";
 
 export const Skills = () => {
   return (
