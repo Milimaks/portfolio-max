@@ -1,7 +1,14 @@
+import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Section } from "./Section";
-import { Code, LucideIcon, Rss, StickyNote } from "lucide-react";
 import Link from "next/link";
+import {
+  SIDE_PROJECTS,
+  SideProjectProps,
+  WorkProps,
+  WORKS,
+} from "./dataStatus";
+import { Section } from "./Section";
+import { ArrowUpRight } from "lucide-react";
 
 export const Status = () => {
   return (
@@ -12,13 +19,7 @@ export const Status = () => {
           <p className="text-sm text-muted-foreground">Side, fun project</p>
           <div className="flex flex-col gap-4">
             {SIDE_PROJECTS.map((project, index) => (
-              <SideProject
-                key={index}
-                Logo={project.Logo}
-                title={project.title}
-                description={project.description}
-                url="/"
-              />
+              <SideProject key={index} {...project} />
             ))}
           </div>
         </Card>
@@ -28,55 +29,28 @@ export const Status = () => {
           Work
           <div className="flex flex-col gap-4">
             {WORKS.map((work, index) => (
-              <Work
-                image={work.image}
-                title={work.title}
-                role={work.role}
-                date={work.date}
-                url={work.url}
-                key={index}
-              />
+              <Work key={index} {...work} />
             ))}
           </div>
         </Card>
-        <Card className="p-4 flex-1">Contact me</Card>
+        <Card className="p-4 flex-1 flex flex-col gap-2">
+          <p className="text-lg text-muted-foreground">Contact me</p>
+          <ContactCard
+            name="Github"
+            description="View my projects"
+            image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png"
+            mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png"
+          />
+          <ContactCard
+            name="Github"
+            description="View my projects"
+            image="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png"
+            mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png"
+          />
+        </Card>
       </div>
     </Section>
   );
-};
-
-const SIDE_PROJECTS: SideProjectProps[] = [
-  {
-    Logo: Code,
-    title: "Githut",
-    description: "A Github clone",
-    url: "/",
-  },
-  {
-    Logo: StickyNote,
-    title: "Linkedin",
-    description: "A Linkedin clone",
-    url: "/",
-  },
-  {
-    Logo: StickyNote,
-    title: "Githut",
-    description: "A Github clone",
-    url: "/",
-  },
-  {
-    Logo: Rss,
-    title: "Linkedin",
-    description: "A Linkedin clone",
-    url: "/",
-  },
-];
-
-type SideProjectProps = {
-  Logo: LucideIcon;
-  title: string;
-  description: string;
-  url: string;
 };
 
 const SideProject = (props: SideProjectProps) => {
@@ -96,45 +70,6 @@ const SideProject = (props: SideProjectProps) => {
   );
 };
 
-const WORKS: WorkProps[] = [
-  {
-    image: "/my-face.png",
-    title: "Wizbii",
-    role: "Frontend Developer",
-    date: "2020 - Present",
-    url: "/",
-  },
-  {
-    image: "/my-face.png",
-    title: "Wizbii",
-    role: "Frontend Developer",
-    date: "2020 - Present",
-    url: "/",
-  },
-  {
-    image: "/my-face.png",
-    title: "Wizbii",
-    role: "Frontend Developer",
-    date: "2020 - Present",
-    url: "/",
-  },
-  {
-    image: "/my-face.png",
-    title: "Wizbii",
-    role: "Frontend Developer",
-    date: "2020 - Present",
-    url: "/",
-  },
-];
-
-type WorkProps = {
-  image: string;
-  title: string;
-  role: string;
-  date: string;
-  url: string;
-};
-
 const Work = (props: WorkProps) => {
   return (
     <Link
@@ -147,12 +82,49 @@ const Work = (props: WorkProps) => {
         className="w-10 h-10 object-contain rounded-md"
       />
       <div>
-        <p className="text-lg font-semibold">{props.title}</p>
+        <div className="flex items-center gap-2">
+          <p className="text-lg font-semibold">{props.title}</p>
+          {props.freelance && <Badge variant="outline">Freelance</Badge>}
+        </div>
         <p className="text-sm text-muted-foreground">{props.role}</p>
         <div className="ml-auto">
           <p className="text-sm text-muted-foreground">{props.date}</p>
         </div>
       </div>
     </Link>
+  );
+};
+
+const ContactCard = (props: {
+  image: string;
+  mediumImage: string;
+  name: string;
+  description: string;
+}) => {
+  return (
+    <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
+      <div className="relative">
+        <img
+          src={props.image}
+          alt={props.name}
+          className="w-10 h-10 rounded-full object-contain"
+        />
+        <img
+          src={props.mediumImage}
+          alt={props.name}
+          className="w-4 h-4 absolute -bottom-1 -right-1 rounded-full object-contain"
+        />
+      </div>
+      <div className="mr-auto">
+        <div className="flex items-center gap-2">
+          <p className="text-lg font-semibold">{props.name}</p>
+        </div>
+        <p className="text-sm text-muted-foreground">{props.description}</p>
+      </div>
+      <ArrowUpRight
+        size={16}
+        className="group-hover:translate-x-2 mr-4 group-hover:-translate-2 transition-transform"
+      />
+    </Card>
   );
 };
