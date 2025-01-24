@@ -1,14 +1,9 @@
-import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
-import {
-  SIDE_PROJECTS,
-  SideProjectProps,
-  WorkProps,
-  WORKS,
-} from "./dataStatus";
+import { ContactCard } from "./ContactCard";
+import { SIDE_PROJECTS, WORKS } from "./dataStatus";
 import { Section } from "./Section";
-import { ArrowUpRight } from "lucide-react";
+import { SideProject } from "./SideProject";
+import { Work } from "./Works";
 
 export const Status = () => {
   return (
@@ -50,81 +45,5 @@ export const Status = () => {
         </Card>
       </div>
     </Section>
-  );
-};
-
-const SideProject = (props: SideProjectProps) => {
-  return (
-    <Link
-      href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded"
-    >
-      <span className="bg-accent text-accent-foreground p-4 rounded-sm">
-        <props.Logo />
-      </span>
-      <div>
-        <p className="text-lg font-semibold">{props.title}</p>
-        <p className="text-sm text-muted-foreground">{props.description}</p>
-      </div>
-    </Link>
-  );
-};
-
-const Work = (props: WorkProps) => {
-  return (
-    <Link
-      href={props.url}
-      className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded"
-    >
-      <img
-        src={props.image}
-        alt={props.title}
-        className="w-10 h-10 object-contain rounded-md"
-      />
-      <div>
-        <div className="flex items-center gap-2">
-          <p className="text-lg font-semibold">{props.title}</p>
-          {props.freelance && <Badge variant="outline">Freelance</Badge>}
-        </div>
-        <p className="text-sm text-muted-foreground">{props.role}</p>
-        <div className="ml-auto">
-          <p className="text-sm text-muted-foreground">{props.date}</p>
-        </div>
-      </div>
-    </Link>
-  );
-};
-
-const ContactCard = (props: {
-  image: string;
-  mediumImage: string;
-  name: string;
-  description: string;
-}) => {
-  return (
-    <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
-      <div className="relative">
-        <img
-          src={props.image}
-          alt={props.name}
-          className="w-10 h-10 rounded-full object-contain"
-        />
-        <img
-          src={props.mediumImage}
-          alt={props.name}
-          className="w-4 h-4 absolute -bottom-1 -right-1 rounded-full object-contain"
-        />
-      </div>
-      <div className="mr-auto">
-        <div className="flex items-center gap-2">
-          <p className="text-lg font-semibold">{props.name}</p>
-        </div>
-        <p className="text-sm text-muted-foreground">{props.description}</p>
-      </div>
-      <ArrowUpRight
-        size={16}
-        className="group-hover:translate-x-2 mr-4 group-hover:-translate-2 transition-transform"
-      />
-    </Card>
   );
 };

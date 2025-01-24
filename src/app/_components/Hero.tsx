@@ -3,18 +3,7 @@ import { Section } from "./Section";
 import { cn } from "@/lib/utils";
 import { GithubIcon } from "@/app/_components/icons/GithutIcon";
 import Link from "next/link";
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-  return (
-    <span
-      className={cn(
-        "bg-accent/30 border hover:bg-accent/50 transition-colors border-accent px-1 py-0.5 rounded-sm font-mono text-primary mx-1",
-        className
-      )}
-      {...props}
-    />
-  );
-};
+import { Code } from "./Code";
 
 export const Hero = () => {
   return (
