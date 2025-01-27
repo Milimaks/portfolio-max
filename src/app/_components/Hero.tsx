@@ -15,12 +15,8 @@ export const Hero = () => {
         <h3 className="text-3xl font-caption ">Frontend Developper</h3>
         <p className="text-base">
           I love creating content on{" "}
-          <Link
-            href="https://github.com/Milimaks"
-            target="_blank"
-            className="hover:-translate-y-2 transition-transform duration-300 ease-in-out"
-          >
-            <Code className="inline-flex items-center ">
+          <Link href="https://github.com/Milimaks" target="_blank" className="">
+            <Code className="inline-flex items-center   duration-500  hover:shadow-[0px_6px_0px_0px_black] transition-transform hover:-translate-y-2">
               {" "}
               <GithubIcon size={14} className="inline" /> Githubs
             </Code>
