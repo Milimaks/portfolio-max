@@ -32,7 +32,7 @@ export const Hero = () => {
           </Code>
         </p>
       </div>
-      <div className="flex-[2] max-md:m-auto ml-auto">
+      <div className="flex-[1] max-md:m-auto ml-auto">
         <img
           src="/my-face.png"
           alt="Maxime Faure - Picture"
