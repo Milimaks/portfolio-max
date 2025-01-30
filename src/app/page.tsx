@@ -6,6 +6,7 @@ import { Status } from "./_components/Status";
 import { Skills } from "./_components/Skills";
 import { Contact } from "./_components/Contact";
 import { Footer } from "./_components/Footer";
+import { MyNetworks } from "./_components/MyNetworks";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Contact />
       <Spacing size="md" />
       <Footer />
+      <MyNetworks />
     </main>
   );
 }
