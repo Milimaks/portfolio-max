@@ -10,21 +10,21 @@ export const MyNetworks = () => {
     <ul className="flex flex-col space-y-4 fixed left-16 bottom-0">
       <Link
         href="https://github.com/Milimaks"
-        className={cn(buttonVariants({ variant: "default" }), "size-6 p-0")}
+        className={cn(buttonVariants({ variant: "network" }), "size-6 p-0")}
       >
-        <GithubIcon size={16} className="text-foreground" />
+        <GithubIcon size={16} />
       </Link>
       <Link
         href="https://www.linkedin.com/in/maxime-faure-848355197/"
-        className={cn(buttonVariants({ variant: "default" }), "size-6 p-0  ")}
+        className={cn(buttonVariants({ variant: "network" }), "size-6 p-0")}
       >
-        <LinkedinIcon size={16} className="text-foreground" />
+        <LinkedinIcon size={16} />
       </Link>
       <Link
         href="mailto:maxime.faure93@gmail.com"
-        className={cn(buttonVariants({ variant: "default" }), "size-6 p-0  ")}
+        className={cn(buttonVariants({ variant: "network" }), "size-6 p-0 ")}
       >
-        <MailIcon size={16} className="text-foreground " />
+        <MailIcon size={16} />
       </Link>
       <div className="left-0 right-0 mx-auto block w-px h-[90px] bg-black " />
     </ul>
