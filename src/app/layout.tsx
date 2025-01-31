@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Anek_Telugu } from "next/font/google";
+import { Geist, Geist_Mono, Anek_Telugu, Jua } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,6 +17,12 @@ const anekTelugu = Anek_Telugu({
   subsets: ["telugu"],
 });
 
+const jua = Jua({
+  weight: "400",
+  variable: "--font-heading",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Faure Maxime - Frontend Developer",
   description: "Personal website of Faure Maxime, a frontend developer.",
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${anekTelugu.variable} bg-background text-foreground antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${anekTelugu.variable} ${jua.variable} bg-background text-foreground antialiased`}
       >
         {children}
       </body>

@@ -61,6 +61,18 @@ export default {
       sans: ["var(--font-geist-sans)"],
       caption: ["var(--font-caption)"],
       mono: ["var(--font-geist-mono)"],
+      heading: ["var(--font-heading)"],
+    },
+    animation: {
+      gelatine: "gelatine 0.5s infinite",
+    },
+    keyframes: {
+      gelatine: {
+        "0%, 100%": { transform: "scale(1, 1)" },
+        "25%": { transform: "scale(0.9, 1.1)" },
+        "50%": { transform: "scale(1.1, 0.9)" },
+        "75%": { transform: "scale(0.95, 1.05)" },
+      },
     },
   },
 
