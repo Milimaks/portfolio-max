@@ -27,15 +27,15 @@ export const Header = () => {
           <SiteIcon size={48} />
         </Link>
 
-        <ul className="hidden sm:flex space-x-6 items-center">
+        <ul className="hidden sm:flex space-x-6 items-center font-heading">
           <li>
-            <Link href="#about-me">About me</Link>
+            <Link href="#about-me">o About me</Link>
           </li>
           <li>
-            <Link href="#work">Work</Link>
+            <Link href="#work">o Work</Link>
           </li>
           <li>
-            <Link href="#contact">Contact</Link>
+            <Link href="#contact">o Contact</Link>
           </li>
           <li>
             <Button className="transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2">
@@ -64,27 +64,21 @@ export const Header = () => {
         <div className="pt-2 pb-3 space-y-1">
           <Link
             href="#about-me"
-            className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
           >
-            About me
+            o About me
           </Link>
           <Link
             href="#work"
-            className="block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
           >
-            Work
-          </Link>
-          <Link
-            href="#work"
-            className="block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
-          >
-            Contact
+            o Work
           </Link>
           <Link
             href="#contact"
-            className="block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
           >
-            Contact
+            o Contact
           </Link>
         </div>
       </div>
