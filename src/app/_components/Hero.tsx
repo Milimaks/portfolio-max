@@ -1,43 +1,58 @@
-import { ComponentPropsWithoutRef } from "react";
+"use client";
+
+import { Button } from "@/components/ui/button";
 import { Section } from "./Section";
-import { cn } from "@/lib/utils";
-import { GithubIcon } from "@/app/_components/icons/GithutIcon";
-import Link from "next/link";
-import { Code } from "./Code";
+import { ChevronDown } from "lucide-react";
+import { AboutMe } from "./AboutMe";
+import { useState } from "react";
 
 export const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
-    <Section className="flex max-md:flex-col items-start gap-4">
-      <div className="flex-[3] w-full flex flex-col gap-2">
-        <h2 className="font-caption text-5xl text-primary font-bold">
-          Maxime Faure
-        </h2>
-        <h3 className="text-3xl font-caption ">Frontend Developper</h3>
-        <p className="text-base">
-          I love creating content on{" "}
-          <Link href="https://github.com/Milimaks" target="_blank" className="">
-            <Code className="inline-flex items-center   duration-500  hover:shadow-[0px_6px_0px_0px_black] transition-transform hover:-translate-y-2">
-              {" "}
-              <GithubIcon size={14} className="inline" /> Githubs
-            </Code>
-          </Link>
-          Currently working at <Code>Wizbii</Code>
-          living in{" "}
-          <Code className="inline-flex items-center ">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-1280px-Flag_of_France.svg.png"
-              style={{ height: 16, width: "auto" }}
-            />
-            France,Toulouse
-          </Code>
-        </p>
+    <Section className="flex flex-col max-md:flex-col items-start gap-4 max-w-3xl">
+      <div className="flex flex-row-reverse">
+        <div className="flex-[1] max-w-48">
+          <img
+            src="/my-face.png"
+            alt="Maxime Faure - Picture"
+            className="w-32 mx-auto h-auto rounded-full max-w-56 max-md:w-56 "
+          />
+        </div>
+        <div className="flex-[3] w-full  justify-center items-center gap-2">
+          <h2 className="font-caption text-5xl text-primary  font-bold">
+            Hello, I'm Maxime
+          </h2>
+          <h3 className="text-3xl font-caption ">Fullstack Developper</h3>
+          <p className="text-base font-">
+            I'm a software developer living in Toulouse, France. Specializing in
+            javascript, I have a passion for creating beautiful and functional
+            websites with a preference for Front-end with React
+            <br />
+            <br />
+          </p>
+          <h3 className="font-caption">I can help you with :</h3>
+          <ul className="flex flex-col gap-2 mt-2 font-heading relative">
+            <li>o React</li>
+            <li>o Node.js</li>
+            <li>o Remix / Next.js</li>
+            <li className="flex justify-between">
+              <p>o SEO and more...</p>
+              <Button className="absolute right-0 bottom-0 transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2">
+                More about me
+              </Button>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="flex-[1] max-md:m-auto ml-auto">
-        <img
-          src="/my-face.png"
-          alt="Maxime Faure - Picture"
-          className="w-full h-auto rounded-full max-w-sm max-md:w-56 "
-        />
+      <div className="w-full ">
+        {isVisible && <AboutMe />}
+        <span className="w-full flex justify-center pt-8 text-primary/50 transition-all duration-500">
+          <ChevronDown
+            className="hover:animate-gelatine cursor-pointer "
+            onClick={() => setIsVisible(!isVisible)}
+          />
+        </span>
       </div>
     </Section>
   );
