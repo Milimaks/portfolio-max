@@ -5,9 +5,22 @@ import { Section } from "./Section";
 import { ChevronDown } from "lucide-react";
 import { AboutMe } from "./AboutMe";
 import { useState } from "react";
+import { Collapsible } from "@/components/ui/collapsible";
+import {
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@radix-ui/react-collapsible";
 
 export const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isCollapsibleOpen, setIsCollapsibleOpen] = useState(false);
+
+  const handleChevronClick = () => {
+    setIsCollapsibleOpen(!isCollapsibleOpen);
+  };
+
+  const handleButtonClick = () => {
+    setIsCollapsibleOpen(true);
+  };
 
   return (
     <Section className="flex flex-col max-md:flex-col items-start gap-4 max-w-3xl">
@@ -38,22 +51,31 @@ export const Hero = () => {
             <li>o Remix / Next.js</li>
             <li className="flex justify-between">
               <p>o SEO and more...</p>
-              <Button className="absolute right-0 bottom-0 transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2">
+              <Button
+                onClick={handleButtonClick}
+                className="absolute right-0 bottom-0 transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2 "
+              >
                 More about me
               </Button>
             </li>
           </ul>
         </div>
       </div>
-      <div className="w-full ">
-        {isVisible && <AboutMe />}
-        <span className="w-full flex justify-center pt-8 text-primary/50 transition-all duration-500">
-          <ChevronDown
-            className="hover:animate-gelatine cursor-pointer "
-            onClick={() => setIsVisible(!isVisible)}
-          />
-        </span>
-      </div>
+      <Collapsible open={isCollapsibleOpen} className="w-full">
+        <CollapsibleContent className="overflow-hidden data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+          <AboutMe />
+        </CollapsibleContent>
+        <CollapsibleTrigger asChild>
+          <div className="w-full flex justify-center">
+            <ChevronDown
+              className={`text-primary/50 cursor-pointer transition-transform ${
+                isCollapsibleOpen ? "" : "hidden"
+              }`}
+              onClick={handleChevronClick}
+            />
+          </div>
+        </CollapsibleTrigger>
+      </Collapsible>
     </Section>
   );
 };

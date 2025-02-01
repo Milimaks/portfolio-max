@@ -65,6 +65,8 @@ export default {
     },
     animation: {
       gelatine: "gelatine 0.5s infinite",
+      slideDown: "slideDown 300ms ease-out",
+      slideUp: "slideUp 300ms ease-out",
     },
     keyframes: {
       gelatine: {
@@ -72,6 +74,14 @@ export default {
         "25%": { transform: "scale(0.9, 1.1)" },
         "50%": { transform: "scale(1.1, 0.9)" },
         "75%": { transform: "scale(0.95, 1.05)" },
+      },
+      slideDown: {
+        from: { height: "0" },
+        to: { height: "var(--radix-collapsible-content-height)" },
+      },
+      slideUp: {
+        from: { height: "var(--radix-collapsible-content-height)" },
+        to: { height: "0" },
       },
     },
   },
