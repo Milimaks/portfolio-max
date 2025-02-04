@@ -19,7 +19,7 @@ export const Hero = () => {
   };
 
   const handleButtonClick = () => {
-    setIsCollapsibleOpen(true);
+    setIsCollapsibleOpen(!isCollapsibleOpen);
   };
 
   return (
@@ -55,7 +55,7 @@ export const Hero = () => {
                 onClick={handleButtonClick}
                 className="absolute right-0 bottom-0 transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2 "
               >
-                More about me
+                {isCollapsibleOpen ? "Less about me" : "More about me"}
               </Button>
             </li>
           </ul>
