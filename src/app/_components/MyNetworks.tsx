@@ -9,18 +9,21 @@ export const MyNetworks = () => {
   return (
     <ul className="flex flex-col space-y-4 fixed left-16 bottom-0">
       <Link
+        target="_blank"
         href="https://github.com/Milimaks"
-        className={cn(buttonVariants({ variant: "network" }), "size-6 p-0")}
+        className={cn(buttonVariants({ variant: "network" }), "size-6 p-0 ")}
       >
         <GithubIcon size={16} />
       </Link>
       <Link
+        target="_blank"
         href="https://www.linkedin.com/in/maxime-faure-848355197/"
         className={cn(buttonVariants({ variant: "network" }), "size-6 p-0")}
       >
         <LinkedinIcon size={16} />
       </Link>
       <Link
+        target="_blank"
         href="mailto:maxime.faure93@gmail.com"
         className={cn(buttonVariants({ variant: "network" }), "size-6 p-0 ")}
       >
