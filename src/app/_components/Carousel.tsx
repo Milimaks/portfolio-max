@@ -5,12 +5,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Section } from "./Section";
 
 const images = [
-  "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=500&h=500&fit=crop",
-  "https://ix-marketing.imgix.net/genfill.png?auto=format,compress&w=1946",
-  "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=500&h=500&fit=crop",
-  "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=500&h=500&fit=crop",
-  "https://ix-marketing.imgix.net/genfill.png?auto=format,compress&w=1946",
-  "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=500&h=500&fit=crop",
+  "Piton_Neige_2.jpg",
+  "/Maroc_Singe.jpg",
+  "/Mont_Fuji.jpg",
+  "Nara_Parc.jpg",
+  "Skydive.png",
+  "Torii_Japan.jpg",
+  "Piton_Neige.jpg",
 ];
 
 export default function Carousel() {
