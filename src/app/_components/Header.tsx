@@ -22,7 +22,7 @@ export const Header = () => {
         scrollDirection === "up" && "shadow-md"
       )}
     >
-      <Section className="flex justify-between items-center">
+      <Section className="flex justify-between items-center max-w-5xl">
         <Link href="/">
           <SiteIcon size={48} />
         </Link>
@@ -38,9 +38,14 @@ export const Header = () => {
             <Link href="#contact">o Contact</Link>
           </li>
           <li>
-            <Button className="transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2">
-              Resume
-            </Button>
+            <a
+              href="/CV - Maxime Faure - Developpeur JS.pdf"
+              download="CV_Faure_Maxime"
+            >
+              <Button className="transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2">
+                Resume
+              </Button>
+            </a>
           </li>
         </ul>
 
