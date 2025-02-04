@@ -23,7 +23,7 @@ export const Hero = () => {
   };
 
   return (
-    <Section className="flex flex-col max-md:flex-col items-start gap-4 max-w-3xl">
+    <Section className="flex flex-col max-md:flex-col items-start gap-4 ">
       <div className="flex flex-row-reverse">
         <div className="flex-[1] max-w-48">
           <img

@@ -8,7 +8,7 @@ import { Spacing } from "./Spacing";
 
 export const AboutMe = () => {
   return (
-    <Section className="flex flex-col max-md:flex-col items-start gap-4 mt-32  max-w-3xl">
+    <Section className="flex flex-col max-md:flex-col items-start gap-4 mt-32">
       <div>
         <div className="flex flex-col gap-4">
           <SkillsFullStack />
@@ -17,7 +17,7 @@ export const AboutMe = () => {
           <SkillsDesign />
         </div>
         <Spacing size="md" />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4" id="about-me">
           <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0 ">
             About Me
           </h2>

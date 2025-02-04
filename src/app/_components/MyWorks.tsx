@@ -1,21 +1,19 @@
-import Link from "next/link";
-import { WorkProps } from "./dataStatus";
 import { Badge } from "@/components/ui/badge";
-import { VerticalTabs } from "./VerticalTabs";
-import { ReactIcon } from "./icons/ReactIcon";
+import { DrupalIcon } from "./icons/DrupalIcon";
+import { GraphQLIcon } from "./icons/GraphQLIcon";
+import { JavascriptIcon } from "./icons/JavascriptIcon";
+import { JqueryIcon } from "./icons/JqueryIcon";
+import { MUIIcon } from "./icons/MUIIcon";
 import { NestIcon } from "./icons/NestIcon";
 import { NextIcon } from "./icons/NextIcon";
-import { RemixIcon } from "./icons/RemixIcon";
-import { Type } from "lucide-react";
-import { TypescriptIcon } from "./icons/TypescriptIcon";
-import { MUIIcon } from "./icons/MUIIcon";
-import { GraphQLIcon } from "./icons/GraphQLIcon";
-import { PlaywrightIcon } from "./icons/PlaywrightIcon";
-import { TailwindIcon } from "./icons/TailwindIcon";
-import { DrupalIcon } from "./icons/DrupalIcon";
-import { JavascriptIcon } from "./icons/JavascriptIcon";
 import { PhpIcon } from "./icons/PhpIcon";
-import { JqueryIcon } from "./icons/JqueryIcon";
+import { PlaywrightIcon } from "./icons/PlaywrightIcon";
+import { ReactIcon } from "./icons/ReactIcon";
+import { RemixIcon } from "./icons/RemixIcon";
+import { TailwindIcon } from "./icons/TailwindIcon";
+import { TypescriptIcon } from "./icons/TypescriptIcon";
+import { Section } from "./Section";
+import { VerticalTabs } from "./VerticalTabs";
 
 export const MyWorks = () => {
   const tabItems = [
@@ -122,10 +120,15 @@ export const MyWorks = () => {
     },
   ];
   return (
-    <div className=" flex items-center justify-center p-8">
-      <div className="w-full max-w-4xl">
-        <VerticalTabs items={tabItems} />
+    <Section id="work">
+      <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        Career History
+      </h2>
+      <div className=" flex items-center justify-center">
+        <div className="w-full max-w-4xl">
+          <VerticalTabs items={tabItems} />
+        </div>
       </div>
-    </div>
+    </Section>
   );
 };
