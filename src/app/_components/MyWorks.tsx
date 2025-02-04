@@ -46,12 +46,12 @@ export const MyWorks = () => {
           </ul>
           <Badge variant="outline">Skills</Badge>
           <div className="flex items-center gap-4 text-black">
-            <ReactIcon size={24} />
-            <NestIcon size={24} />
-            <NextIcon size={24} />
-            <RemixIcon size={24} />
-            <TypescriptIcon size={24} />
-            <TailwindIcon size={24} />
+            <ReactIcon size={30} />
+            <NestIcon size={30} />
+            <NextIcon size={30} />
+            <RemixIcon size={30} />
+            <TypescriptIcon size={30} />
+            <TailwindIcon size={30} />
           </div>
         </div>
       ),
@@ -78,11 +78,11 @@ export const MyWorks = () => {
           </ul>
           <Badge variant="outline">Skills</Badge>
           <div className="flex items-center gap-4 text-black">
-            <ReactIcon size={24} />
-            <GraphQLIcon size={24} />
-            <TypescriptIcon size={24} />
-            <MUIIcon size={24} />
-            <PlaywrightIcon size={24} />
+            <ReactIcon size={30} />
+            <GraphQLIcon size={30} />
+            <TypescriptIcon size={30} />
+            <MUIIcon size={30} />
+            <PlaywrightIcon size={30} />
           </div>
         </div>
       ),
@@ -109,11 +109,11 @@ export const MyWorks = () => {
           </ul>
           <Badge variant="outline">Skills</Badge>
           <div className="flex items-center gap-4 text-black">
-            <ReactIcon size={24} />
-            <DrupalIcon size={24} />
-            <JavascriptIcon size={24} />
-            <PhpIcon size={24} />
-            <JqueryIcon size={24} />
+            <ReactIcon size={30} />
+            <DrupalIcon size={30} />
+            <JavascriptIcon size={30} />
+            <PhpIcon size={30} />
+            <JqueryIcon size={36} />
           </div>
         </div>
       ),

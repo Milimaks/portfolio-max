@@ -8,9 +8,12 @@ import { Spacing } from "./Spacing";
 
 export const AboutMe = () => {
   return (
-    <Section className="flex flex-col max-md:flex-col items-start gap-4 mt-32">
+    <Section className="flex flex-col max-md:flex-col items-start gap-4 mt-32 p-0">
       <div>
-        <div className="flex flex-col gap-4">
+        <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0 ">
+          Main Skills
+        </h2>
+        <div className="flex flex-col gap-4 pt-4">
           <SkillsFullStack />
           <SkillsFrontEnd />
           <SkillsBackEnd />
@@ -19,10 +22,10 @@ export const AboutMe = () => {
         <Spacing size="md" />
         <div className="flex flex-col gap-4" id="about-me">
           <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0 ">
-            About Me
+            A propos de moi
           </h2>
           <div className="flex gap-2">
-            <p className="text-lg text-muted-foreground basis-1/2">
+            <p className="text-primary basis-1/2">
               Avant de débuter mon aventure professionnelle en informatique,
               j'ai été pendant plusieurs années conducteur de travaux dans le
               secteur du bâtiment. Même si j'ai adoré la gestion de projet, le

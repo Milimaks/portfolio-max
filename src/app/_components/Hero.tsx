@@ -68,7 +68,7 @@ export const Hero = () => {
         <CollapsibleTrigger asChild>
           <div className="w-full flex justify-center">
             <ChevronDown
-              className={`text-primary/50 cursor-pointer transition-transform ${
+              className={`mt-8 text-primary/50 cursor-pointer transition-transform ${
                 isCollapsibleOpen ? "" : "hidden"
               }`}
               onClick={handleChevronClick}
