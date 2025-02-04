@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 
 export const ContactCard = (props: {
@@ -6,9 +7,15 @@ export const ContactCard = (props: {
   mediumImage: string;
   name: string;
   description: string;
+  className?: string;
 }) => {
   return (
-    <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
+    <Card
+      className={cn(
+        "p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4",
+        props.className
+      )}
+    >
       <div className="relative">
         <img
           src={props.image}
