@@ -7,7 +7,7 @@ import { MailIcon } from "./icons/MailIcon";
 
 export const MyNetworks = () => {
   return (
-    <ul className="flex flex-col space-y-4 fixed left-16 bottom-0">
+    <ul className="flex flex-col space-y-4 fixed left-16 bottom-0 max-lg:hidden">
       <Link
         target="_blank"
         href="https://github.com/Milimaks"
