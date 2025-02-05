@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <Section className="flex flex-col max-md:flex-col items-start gap-4 ">
+    <Section className="flex flex-col max-md:flex-col items-start gap-4 pt-5">
       <div className="flex flex-row-reverse">
         <div className="flex-[1] max-w-48">
           <img

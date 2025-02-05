@@ -16,6 +16,15 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ setIsCollapsibleOpen }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleMobileMenuClick = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleAboutMeClick = () => {
+    setIsCollapsibleOpen(true);
+    setIsMobileMenuOpen(false);
+  };
+
   const { scrollDirection } = useScroll();
 
   return (
@@ -76,18 +85,21 @@ export const Header: React.FC<HeaderProps> = ({ setIsCollapsibleOpen }) => {
           <Link
             href="#about-me"
             className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            onClick={handleAboutMeClick}
           >
             o A propos
           </Link>
           <Link
             href="#work"
-            className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            onClick={handleMobileMenuClick}
           >
             o Projets
           </Link>
           <Link
             href="#contact"
-            className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            onClick={handleMobileMenuClick}
           >
             o Contact
           </Link>
