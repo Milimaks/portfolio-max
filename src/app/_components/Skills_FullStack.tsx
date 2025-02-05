@@ -8,8 +8,8 @@ import { NextIcon } from "./icons/NextIcon";
 
 export const SkillsFullStack = () => {
   return (
-    <div className="flex items-center gap-4">
-      <Badge variant="outline" className="min-w-fit">
+    <div className="flex items-center gap-4 max-md:flex-col max-md:items-start">
+      <Badge variant="outline" className="w-fit">
         Fullstack
       </Badge>
       <ul className="flex flex-wrap gap-2">

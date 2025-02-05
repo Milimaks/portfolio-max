@@ -20,11 +20,11 @@ export const AboutMe = () => {
           <SkillsDesign />
         </div>
         <Spacing size="md" />
-        <div className="flex flex-col gap-4" id="about-me">
+        <div className="flex flex-col gap-4 " id="about-me">
           <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0 ">
             A propos de moi
           </h2>
-          <div className="flex gap-2">
+          <div className="flex gap-2 max-md:flex-col">
             <p className="text-primary basis-1/2">
               Avant de débuter mon aventure professionnelle en informatique,
               j'ai été pendant plusieurs années conducteur de travaux dans le

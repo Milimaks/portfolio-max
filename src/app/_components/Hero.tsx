@@ -1,15 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Section } from "./Section";
-import { ChevronDown } from "lucide-react";
-import { AboutMe } from "./AboutMe";
-import { useState } from "react";
 import { Collapsible } from "@/components/ui/collapsible";
 import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
+import { ChevronDown } from "lucide-react";
+import { AboutMe } from "./AboutMe";
+import { Section } from "./Section";
 
 interface HeroProps {
   isCollapsibleOpen: boolean;
@@ -30,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({
 
   return (
     <Section className="flex flex-col max-md:flex-col items-start gap-4 pt-5">
-      <div className="flex flex-row-reverse">
+      <div className="flex flex-row-reverse max-md:flex-col max-md:items-center gap-4">
         <div className="flex-[1] max-w-48">
           <img
             src="/my-face.png"
@@ -38,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({
             className="w-32 mx-auto h-auto rounded-full max-w-56 max-md:w-56 "
           />
         </div>
-        <div className="flex-[3] w-full  justify-center items-center gap-2">
+        <div className="flex-[3] w-full  justify-center items-center gap-2 max-md:mt-8">
           <h2 className="font-caption text-5xl text-primary  font-bold">
             Hello, je suis Maxime
           </h2>
@@ -73,10 +72,10 @@ export const Hero: React.FC<HeroProps> = ({
           <AboutMe />
         </CollapsibleContent>
         <CollapsibleTrigger asChild>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center group">
             <ChevronDown
-              className={`mt-8 text-primary/50 cursor-pointer transition-transform ${
-                isCollapsibleOpen ? "" : "hidden"
+              className={`mt-8 text-primary/50 cursor-pointer hover:rotate-180 transition-transform ${
+                isCollapsibleOpen ? "hover:animate-gelatine  " : "hidden"
               }`}
               onClick={handleChevronClick}
             />

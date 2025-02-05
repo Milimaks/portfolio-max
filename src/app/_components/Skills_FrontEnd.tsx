@@ -1,16 +1,12 @@
 import { Badge } from "@/components/ui/badge";
-import { JavascriptIcon } from "./icons/JavascriptIcon";
-import { NextIcon } from "./icons/NextIcon";
+import { GraphQLIcon } from "./icons/GraphQLIcon";
 import { ReactIcon } from "./icons/ReactIcon";
 import { RemixIcon } from "./icons/RemixIcon";
-import { TailwindIcon } from "./icons/TailwindIcon";
-import { TypescriptIcon } from "./icons/TypescriptIcon";
-import { GraphQLIcon } from "./icons/GraphQLIcon";
 
 export const SkillsFrontEnd = () => {
   return (
-    <div className="flex items-center gap-4">
-      <Badge variant="outline" className="min-w-fit flex-3">
+    <div className="flex items-center gap-4 max-md:flex-col max-md:items-start">
+      <Badge variant="outline" className="w-fit flex-3">
         Front End
       </Badge>
       <ul className="flex flex-wrap gap-2">

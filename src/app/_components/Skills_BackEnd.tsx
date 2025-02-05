@@ -1,14 +1,12 @@
 import { Badge } from "@/components/ui/badge";
-import { ReactIcon } from "./icons/ReactIcon";
-import { NextIcon } from "./icons/NextIcon";
+import { MySQLIcon } from "./icons/MySQLIcon";
 import { NestIcon } from "./icons/NestIcon";
 import { PrismaIcon } from "./icons/PrismaIcon";
-import { MySQLIcon } from "./icons/MySQLIcon";
 
 export const SkillsBackEnd = () => {
   return (
-    <div className="flex items-center gap-4">
-      <Badge variant="outline" className="min-w-fit">
+    <div className="flex items-center gap-4  max-md:flex-col max-md:items-start">
+      <Badge variant="outline" className="w-fit">
         Back End
       </Badge>
       <ul className="flex flex-wrap gap-2">

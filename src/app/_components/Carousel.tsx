@@ -10,8 +10,8 @@ const images = [
   "/Mont_Fuji.jpg",
   "Nara_Parc.jpg",
   "Skydive.png",
-  "Torii_Japan.jpg",
   "Piton_Neige.jpg",
+  "Torii_Japan.jpg",
 ];
 
 export default function Carousel() {
@@ -30,47 +30,49 @@ export default function Carousel() {
   };
 
   return (
-    <div className="relative w-[250px] h-[250px] mx-auto ">
-      {images.map((image, index) => {
-        const offset = index - currentIndex;
-        const isVisible = Math.abs(offset) <= 1;
+    <div className="max-md:min-h-[300px] mx-auto max-md:pt-16">
+      <div className="relative w-[250px] h-[250px] max-md:w-[200px] max-md:h-[200px]  ">
+        {images.map((image, index) => {
+          const offset = index - currentIndex;
+          const isVisible = Math.abs(offset) <= 1;
 
-        return (
-          isVisible && (
-            <div
-              key={image}
-              className="absolute w-full h-full transition-all duration-500 ease-out"
-              style={{
-                transform: `translateX(${offset * 30}%) rotate(${
-                  offset * 5
-                }deg)`,
-                zIndex: offset === 0 ? 10 : 5,
-                opacity: 1 - Math.abs(offset) * 0.5,
-              }}
-            >
-              <img
-                src={image}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover rounded-2xl shadow-xl"
-              />
-            </div>
-          )
-        );
-      })}
+          return (
+            isVisible && (
+              <div
+                key={image}
+                className="absolute w-full h-full transition-all duration-500 ease-out"
+                style={{
+                  transform: `translateX(${offset * 30}%) rotate(${
+                    offset * 5
+                  }deg)`,
+                  zIndex: offset === 0 ? 10 : 5,
+                  opacity: 1 - Math.abs(offset) * 0.5,
+                }}
+              >
+                <img
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-full object-cover rounded-2xl shadow-xl"
+                />
+              </div>
+            )
+          );
+        })}
 
-      <button
-        onClick={goToPrevious}
-        className="absolute left-[-50px] top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-20 hover:bg-gray-100 transition-colors"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
+        <button
+          onClick={goToPrevious}
+          className="absolute left-[-50px] top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-20 hover:bg-gray-100 transition-colors"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
 
-      <button
-        onClick={goToNext}
-        className="absolute right-[-50px] top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-20 hover:bg-gray-100 transition-colors"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button>
+        <button
+          onClick={goToNext}
+          className="absolute right-[-50px] top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg z-20 hover:bg-gray-100 transition-colors"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </div>
     </div>
   );
 }
