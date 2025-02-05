@@ -23,24 +23,24 @@ export const MyWorks = () => {
       content: (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold font-heading text-primary">
-            Fullstack Developper - JavaScript / Typescript
+            Développeur Fullstack - JavaScript / Typescript
           </h2>
           <p className="text-sm font-heading text-primary/50">
-            August 2024 - Present
+            Août 2024 - Aujourd'hui
           </p>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary font-heading mr-2">▸</span>
               <span className="text-primary">
-                Developed and styled interactive web applications for Apple
-                Music using Ember and SCSS
+                Maintenance d'une application de gestion de parc automobile sur
+                la partie Front-End
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">▸</span>
               <span className=" text-primary">
-                Built and shipped the Apple Music Extension for Facebook
-                Messenger leveraging third-party and internal API integrations
+                Développement d'un site vitrine pour une entreprise de sécurité
+                incendie
               </span>
             </li>
           </ul>
@@ -62,17 +62,33 @@ export const MyWorks = () => {
       content: (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold font-heading text-primary">
-            Front-End Developer
+            Front-End Développeur
           </h2>
           <p className="text-sm font-heading text-primary/50">
-            November 2023 - August 2024
+            Novembre 2023 - Août 2024
           </p>
+          <p className="font-heading text-primary">HubeeConnect</p>
+
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary  mr-2">▸</span>
               <span className="text-primary">
-                Collaborated with a small team of student designers to spearhead
-                new projects
+                Développement d'une plateforme de gestion de parc automobiles
+                communiquant avec une application mobile
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary  mr-2">▸</span>
+              <span className="text-primary">
+                Rédaction de la documentation technique pour faciliter la
+                maintenance et l’évolution de la plateforme.
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary  mr-2">▸</span>
+              <span className="text-primary">
+                Écriture de tests end-to-end avec Playwright pour assurer la
+                fiabilité et la stabilité de l’application.
               </span>
             </li>
           </ul>
@@ -93,17 +109,34 @@ export const MyWorks = () => {
       content: (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold font-heading text-primary">
-            Software Engineer
+            Ingénieur en Technologie de l'information
           </h2>
           <p className="text-sm font-heading text-primary/50">
             February 2023 - November 2023
           </p>
+          <p className="font-heading text-primary">SNCF : UAS</p>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary mr-2">▸</span>
               <span className="text-primary">
-                Engineered and maintained major features of customer-facing web
-                app using ES6, Handlebars, Backbone, Marionette and CSS
+                Développement fullstack d'un site web de base pour la SNCF
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">▸</span>
+              <span className="text-primary">
+                Reprise du design initial de "l'usine à sites" pour d'autres
+                sites web de la SNCF
+              </span>
+            </li>
+          </ul>
+          <p className="font-heading text-primary">SNCF : E-Publimmo</p>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="text-primary mr-2">▸</span>
+              <span className="text-primary">
+                Refonte graphique complète d'un site existant pour la SNCF sur
+                des annonces immobilières
               </span>
             </li>
           </ul>
@@ -122,7 +155,7 @@ export const MyWorks = () => {
   return (
     <Section id="work">
       <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        Career History
+        Parcours professionnel{" "}
       </h2>
       <div className=" flex items-center justify-center">
         <div className="w-full max-w-4xl">

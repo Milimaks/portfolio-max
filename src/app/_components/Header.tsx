@@ -29,10 +29,10 @@ export const Header = () => {
 
         <ul className="hidden sm:flex space-x-6 items-center font-heading">
           <li>
-            <Link href="#about-me">o About me</Link>
+            <Link href="#about-me">o A propos</Link>
           </li>
           <li>
-            <Link href="#work">o Work</Link>
+            <Link href="#work">o Projets</Link>
           </li>
           <li>
             <Link href="#contact">o Contact</Link>
@@ -43,7 +43,7 @@ export const Header = () => {
               download="CV_Faure_Maxime"
             >
               <Button className="transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2">
-                Resume
+                Mon CV
               </Button>
             </a>
           </li>
@@ -71,13 +71,13 @@ export const Header = () => {
             href="#about-me"
             className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
           >
-            o About me
+            o A propos
           </Link>
           <Link
             href="#work"
             className="font-heading block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-900 transition-colors"
           >
-            o Work
+            o Projets
           </Link>
           <Link
             href="#contact"

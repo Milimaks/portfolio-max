@@ -37,6 +37,12 @@ export const SkillsFullStack = () => {
             <p>Next.js</p>
           </Badge>
         </li>
+        <li>
+          <Badge variant="default" className="flex gap-2 w-fit">
+            <DrupalIcon size={24} />
+            <p>Drupal</p>
+          </Badge>
+        </li>
       </ul>
     </div>
   );

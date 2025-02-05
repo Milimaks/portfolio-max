@@ -34,17 +34,18 @@ export const Hero = () => {
         </div>
         <div className="flex-[3] w-full  justify-center items-center gap-2">
           <h2 className="font-caption text-5xl text-primary  font-bold">
-            Hello, I'm Maxime
+            Hello, je suis Maxime
           </h2>
-          <h3 className="text-3xl font-caption ">Fullstack Developper</h3>
+          <h3 className="text-3xl font-caption ">Développeur Fullstack</h3>
           <p className="text-base font-">
-            I'm a software developer living in Toulouse, France. Specializing in
-            javascript, I have a passion for creating beautiful and functional
-            websites with a preference for Front-end with React
+            Je suis un développeur logiciel basé à Toulouse, en France.
+            Spécialisé en JavaScript, je suis passionné par la création de sites
+            web à la fois esthétiques et fonctionnels, avec une préférence pour
+            le Front-end, notamment avec React.
             <br />
             <br />
           </p>
-          <h3 className="font-caption">I can help you with :</h3>
+          <h3 className="font-caption">Je peux vous aider avec :</h3>
           <ul className="flex flex-col gap-2 mt-2 font-heading relative">
             <li>o React</li>
             <li>o Node.js</li>
@@ -55,7 +56,7 @@ export const Hero = () => {
                 onClick={handleButtonClick}
                 className="absolute right-0 bottom-0 transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2 "
               >
-                {isCollapsibleOpen ? "Less about me" : "More about me"}
+                {isCollapsibleOpen ? "En savoir moins" : "En savoir plus"}
               </Button>
             </li>
           </ul>
