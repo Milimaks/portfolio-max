@@ -12,7 +12,7 @@ export const ContactCard = (props: {
   return (
     <Card
       className={cn(
-        "p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4",
+        "p-3 text-primary hover:bg-foreground/10 transition-colors group flex items-center gap-4",
         props.className
       )}
     >
@@ -32,7 +32,7 @@ export const ContactCard = (props: {
         <div className="flex items-center gap-2">
           <p className="text-lg font-semibold">{props.name}</p>
         </div>
-        <p className="text-sm text-muted-foreground">{props.description}</p>
+        <p className="text-sm text-primary">{props.description}</p>
       </div>
       <ArrowUpRight
         size={16}
