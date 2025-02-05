@@ -9,7 +9,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
-export const Header = () => {
+interface HeaderProps {
+  setIsCollapsibleOpen: (isOpen: boolean) => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ setIsCollapsibleOpen }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const { scrollDirection } = useScroll();
@@ -29,7 +33,9 @@ export const Header = () => {
 
         <ul className="hidden sm:flex space-x-6 items-center font-heading">
           <li>
-            <Link href="#about-me">o A propos</Link>
+            <Link href="#about-me" onClick={() => setIsCollapsibleOpen(true)}>
+              o A propos
+            </Link>
           </li>
           <li>
             <Link href="#work">o Projets</Link>

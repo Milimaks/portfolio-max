@@ -11,9 +11,15 @@ import {
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
 
-export const Hero = () => {
-  const [isCollapsibleOpen, setIsCollapsibleOpen] = useState(false);
+interface HeroProps {
+  isCollapsibleOpen: boolean;
+  setIsCollapsibleOpen: (isOpen: boolean) => void;
+}
 
+export const Hero: React.FC<HeroProps> = ({
+  isCollapsibleOpen,
+  setIsCollapsibleOpen,
+}) => {
   const handleChevronClick = () => {
     setIsCollapsibleOpen(!isCollapsibleOpen);
   };
