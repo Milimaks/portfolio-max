@@ -1,10 +1,9 @@
 import { Badge } from "@/components/ui/badge";
-import { ReactIcon } from "./icons/ReactIcon";
-import { JavascriptIcon } from "./icons/JavascriptIcon";
-import { TypescriptIcon } from "./icons/TypescriptIcon";
-import { PhpIcon } from "./icons/PhpIcon";
 import { DrupalIcon } from "./icons/DrupalIcon";
+import { JavascriptIcon } from "./icons/JavascriptIcon";
 import { NextIcon } from "./icons/NextIcon";
+import { PhpIcon } from "./icons/PhpIcon";
+import { TypescriptIcon } from "./icons/TypescriptIcon";
 
 export const SkillsFullStack = () => {
   return (

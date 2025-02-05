@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Section } from "./Section";
+import { useState } from "react";
+import Image from "next/image";
 
 const images = [
   "Piton_Neige_2.jpg",
@@ -49,7 +49,7 @@ export default function Carousel() {
                   opacity: 1 - Math.abs(offset) * 0.5,
                 }}
               >
-                <img
+                <Image
                   src={image}
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover rounded-2xl shadow-xl"

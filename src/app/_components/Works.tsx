@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { WorkProps } from "./dataStatus";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export const Work = (props: WorkProps) => {
   return (
@@ -8,7 +9,7 @@ export const Work = (props: WorkProps) => {
       href={props.url}
       className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded"
     >
-      <img
+      <Image
         src={props.image}
         alt={props.title}
         className="w-10 h-10 object-contain rounded-md"

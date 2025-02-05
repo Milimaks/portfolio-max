@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { ContactCard } from "./ContactCard";
 import { Section } from "./Section";
 
