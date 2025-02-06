@@ -9,7 +9,6 @@ import {
 import { ChevronDown } from "lucide-react";
 import { AboutMe } from "./AboutMe";
 import { Section } from "./Section";
-import Image from "next/image";
 
 interface HeroProps {
   isCollapsibleOpen: boolean;

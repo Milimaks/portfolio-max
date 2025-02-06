@@ -1,7 +1,6 @@
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { WorkProps } from "./dataStatus";
-import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
 
 export const Work = (props: WorkProps) => {
   return (
