@@ -9,6 +9,8 @@ import {
 import { ChevronDown } from "lucide-react";
 import { AboutMe } from "./AboutMe";
 import { Section } from "./Section";
+import { Code } from "./Code";
+import { FrenchFlagIcon } from "./icons/FrenchFlagIcon";
 
 interface HeroProps {
   isCollapsibleOpen: boolean;
@@ -41,16 +43,21 @@ export const Hero: React.FC<HeroProps> = ({
           <h2 className="font-caption text-5xl text-primary  font-bold">
             Hello, je suis Maxime
           </h2>
-          <h3 className="text-3xl font-caption ">Développeur Fullstack</h3>
-          <p className="text-base font-">
-            Je suis un développeur logiciel basé à Toulouse, en France.
-            Spécialisé en JavaScript, je suis passionné par la création de sites
-            web à la fois esthétiques et fonctionnels, avec une préférence pour
-            le Front-end, notamment avec React.
+          <h3 className="text-3xl font-caption ">Développeur Javascript</h3>
+          <p className="text-base ">
+            Je suis un développeur logiciel basé à Toulouse, en{" "}
+            <Code className="inline-flex items-center gap-1 w-fit">
+              <FrenchFlagIcon size={16} className="inline" />
+              France
+            </Code>
+            . Spécialisé en JavaScript / Typescript, je suis passionné par la
+            création de sites web à la fois esthétiques et fonctionnels, avec
+            une préférence pour le <Code>Front-end</Code>, notamment avec
+            <Code>React</Code>.
             <br />
             <br />
           </p>
-          <h3 className="font-caption">Je peux vous aider avec :</h3>
+          <h3 className="">Je peux vous aider avec :</h3>
           <ul className="flex flex-col gap-2 mt-2 font-heading relative">
             <li>o React</li>
             <li>o Node.js</li>
