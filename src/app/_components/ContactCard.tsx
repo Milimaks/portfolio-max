@@ -18,12 +18,12 @@ export const ContactCard = (props: {
       )}
     >
       <div className="relative">
-        <Image
+        <img
           src={props.image}
           alt={props.name}
           className="w-10 h-10 rounded-full object-contain"
         />
-        <Image
+        <img
           src={props.mediumImage}
           alt={props.name}
           className="w-4 h-4 absolute -bottom-1 -right-1 rounded-full object-contain"

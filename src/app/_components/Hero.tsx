@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({
     <Section className="flex flex-col max-md:flex-col items-start gap-4 pt-5">
       <div className="flex flex-row-reverse max-md:flex-col max-md:items-center gap-4">
         <div className="flex-[1] max-w-48">
-          <Image
+          <img
             src="/my-face.png"
             alt="Maxime Faure - Picture"
             className="w-32 mx-auto h-auto rounded-full max-w-56 max-md:w-56 "

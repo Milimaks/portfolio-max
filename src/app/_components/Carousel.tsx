@@ -5,13 +5,13 @@ import { useState } from "react";
 import Image from "next/image";
 
 const images = [
-  "Piton_Neige_2.jpg",
+  "/Piton_Neige_2.jpg",
   "/Maroc_Singe.jpg",
   "/Mont_Fuji.jpg",
-  "Nara_Parc.jpg",
-  "Skydive.png",
-  "Piton_Neige.jpg",
-  "Torii_Japan.jpg",
+  "/Nara_Parc.jpg",
+  "/Skydive.png",
+  "/Piton_Neige.jpg",
+  "/Torii_Japan.jpg",
 ];
 
 export default function Carousel() {
@@ -50,6 +50,7 @@ export default function Carousel() {
                 }}
               >
                 <Image
+                  fill
                   src={image}
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover rounded-2xl shadow-xl"
