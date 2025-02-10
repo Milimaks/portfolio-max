@@ -1,4 +1,7 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 import { DrupalIcon } from "./icons/DrupalIcon";
 import { GraphQLIcon } from "./icons/GraphQLIcon";
 import { JavascriptIcon } from "./icons/JavascriptIcon";
@@ -12,10 +15,14 @@ import { ReactIcon } from "./icons/ReactIcon";
 import { RemixIcon } from "./icons/RemixIcon";
 import { TailwindIcon } from "./icons/TailwindIcon";
 import { TypescriptIcon } from "./icons/TypescriptIcon";
+import { ModalDetail } from "./ModalDetail";
 import { Section } from "./Section";
 import { VerticalTabs } from "./VerticalTabs";
+import { missions } from "@/data/dataModal";
 
 export const MyWorks = () => {
+  const [selectedMission, setSelectedMission] = useState<string | null>(null);
+
   const tabItems = [
     {
       id: "01",
@@ -67,7 +74,12 @@ export const MyWorks = () => {
           <p className="text-sm font-heading text-primary/50">
             Novembre 2023 - Août 2024
           </p>
-          <p className="font-heading text-primary">HubeeConnect</p>
+          <button
+            className="font-heading text-primary p-0 cursor-pointer hover:underline"
+            onClick={() => setSelectedMission("HubeeConnect")}
+          >
+            HubeeConnect
+          </button>
 
           <ul className="space-y-3">
             <li className="flex items-start">
@@ -114,7 +126,13 @@ export const MyWorks = () => {
           <p className="text-sm font-heading text-primary/50">
             February 2023 - November 2023
           </p>
-          <p className="font-heading text-primary">SNCF : UAS</p>
+
+          <button
+            className="font-heading text-primary p-0 cursor-pointer hover:underline"
+            onClick={() => setSelectedMission("sncf_uas")}
+          >
+            SNCF : UAS
+          </button>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary mr-2">▸</span>
@@ -130,7 +148,12 @@ export const MyWorks = () => {
               </span>
             </li>
           </ul>
-          <p className="font-heading text-primary">SNCF : E-Publimmo</p>
+          <button
+            className="font-heading text-primary p-0 cursor-pointer hover:underline"
+            onClick={() => setSelectedMission("sncf_publimmo")}
+          >
+            SNCF : E-Publimmo
+          </button>
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-primary mr-2">▸</span>
@@ -161,6 +184,14 @@ export const MyWorks = () => {
         <div className="w-full max-w-4xl">
           <VerticalTabs items={tabItems} />
         </div>
+        {selectedMission &&
+          missions[selectedMission as keyof typeof missions] && (
+            <ModalDetail
+              {...missions[selectedMission as keyof typeof missions]}
+              isOpen={true}
+              onClose={() => setSelectedMission(null)}
+            />
+          )}
       </div>
     </Section>
   );

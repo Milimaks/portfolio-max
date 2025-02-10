@@ -20,6 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         network:
           "text-primary hover:text-primary/90 hover:-translate-y-1 transition-transform hover:scale-150",
+        work: "hover:underline cursor-pointer p-0",
       },
       size: {
         default: "h-10 px-4 py-2",
