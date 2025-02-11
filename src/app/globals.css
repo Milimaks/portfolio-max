@@ -28,7 +28,9 @@
   --chart-4: 212 10% 12%;
   --chart-5: 212 73% 22%;
   --radius: 0.5rem;
-  --badge: 220.85deg 73.95% 44.17%;
+  /* --badge: 220.85deg 73.95% 44.17%; */
+  --badge: 212 70% 22%;
+  --badge-foreground: 212 70% 82%;
 }
 
 body {

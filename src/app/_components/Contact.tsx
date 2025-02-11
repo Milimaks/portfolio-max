@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ContactCard } from "./ContactCard";
 import { Section } from "./Section";
 
@@ -10,20 +11,24 @@ export const Contact = () => {
         alors n'hésitez pas à me contacter !
       </h2>
       <div className="flex max-md:flex-col gap-4 ">
-        <ContactCard
-          name="Github"
-          description="View my projects"
-          image="/profile.jpeg"
-          mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png"
-          className="cursor-pointer"
-        />
-        <ContactCard
-          name="Linkedin"
-          description="View my profile"
-          image="/profile.jpeg"
-          mediumImage="linkedin-icon.svg"
-          className="cursor-pointer"
-        />
+        <Link href="https://github.com/Milimaks">
+          <ContactCard
+            name="Github"
+            description="View my projects"
+            image="/profile.jpeg"
+            mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1024px-GitHub_Invertocat_Logo.svg.png"
+            className="cursor-pointer"
+          />
+        </Link>
+        <Link href="https://www.linkedin.com/in/maxime-faure-848355197/">
+          <ContactCard
+            name="Linkedin"
+            description="View my profile"
+            image="/profile.jpeg"
+            mediumImage="linkedin-icon.svg"
+            className="cursor-pointer"
+          />
+        </Link>
       </div>
     </Section>
   );
