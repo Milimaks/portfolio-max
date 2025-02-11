@@ -22,9 +22,9 @@ export const VerticalTabs: React.FC<VerticalTabsProps> = ({ items }) => {
           <button
             key={item.id}
             onClick={() => setActiveTab(item.id)}
-            className={`flex items-center w-full px-4 py-3 text-left transition-colors ${
+            className={`flex items-center w-full px-4 py-3 text-left font-heading transition-colors ${
               activeTab === item.id
-                ? "bg-gray-200 border-b-2 md:border-b-0 md:border-l-2 border-primary font-heading text-primary"
+                ? "bg-gray-200 border-b-2 md:border-b-0 md:border-l-2 border-primary "
                 : "hover:bg-gray-200 border-b-2 md:border-b-0 md:border-l-2  border-transparent"
             }`}
           >
@@ -38,7 +38,13 @@ export const VerticalTabs: React.FC<VerticalTabsProps> = ({ items }) => {
                 activeTab === item.id ? "opacity-100 text-primary" : "opacity-0"
               }`}
             />
-            <span className="text-sm text-primary">{item.title}</span>
+            <span
+              className={`text-sm ${
+                activeTab === item.id ? "text-primary" : "text-primary/60"
+              }`}
+            >
+              {item.title}
+            </span>
           </button>
         ))}
       </div>

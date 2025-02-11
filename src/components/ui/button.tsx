@@ -21,6 +21,7 @@ const buttonVariants = cva(
         network:
           "text-primary hover:text-primary/90 hover:-translate-y-1 transition-transform hover:scale-150",
         work: "hover:underline cursor-pointer p-0",
+        normal: "border-2 ",
       },
       size: {
         default: "h-10 px-4 py-2",

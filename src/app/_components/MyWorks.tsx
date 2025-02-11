@@ -19,6 +19,7 @@ import { ModalDetail } from "./ModalDetail";
 import { Section } from "./Section";
 import { VerticalTabs } from "./VerticalTabs";
 import { missions } from "@/data/dataModal";
+import { DockerIcon } from "./icons/DockerIcon";
 
 export const MyWorks = () => {
   const [selectedMission, setSelectedMission] = useState<string | null>(null);
@@ -170,6 +171,7 @@ export const MyWorks = () => {
             <JavascriptIcon size={30} />
             <PhpIcon size={30} />
             <JqueryIcon size={36} />
+            <DockerIcon size={30} />
           </div>
         </div>
       ),
@@ -177,7 +179,7 @@ export const MyWorks = () => {
   ];
   return (
     <Section id="work">
-      <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+      <h2 className="scroll-m-20  pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-primary">
         Parcours professionnel{" "}
       </h2>
       <div className=" flex items-center justify-center">

@@ -44,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({
             Hello, je suis Maxime
           </h2>
           <h3 className="text-3xl font-caption ">Développeur Javascript</h3>
-          <p className="text-base ">
+          <p className="text-base text-primary">
             Je suis un développeur logiciel basé à Toulouse, en{" "}
             <Code className="inline-flex items-center gap-1 w-fit">
               <FrenchFlagIcon size={16} className="inline" />
@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({
             <br />
             <br />
           </p>
-          <h3 className="">Je peux vous aider avec :</h3>
+          <h3 className="text-primary">Je peux vous aider avec :</h3>
           <ul className="flex flex-col gap-2 mt-2 font-heading relative">
             <li>o React</li>
             <li>o Node.js</li>
@@ -67,6 +67,7 @@ export const Hero: React.FC<HeroProps> = ({
               <Button
                 onClick={handleButtonClick}
                 className="absolute right-0 bottom-0 transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2 "
+                variant={"normal"}
               >
                 {isCollapsibleOpen ? "En savoir moins" : "En savoir plus"}
               </Button>

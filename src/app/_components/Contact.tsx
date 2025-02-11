@@ -5,7 +5,7 @@ export const Contact = () => {
   return (
     <Section className="flex flex-col items-start gap-4" id="contact">
       <h2 className="text-3xl font-bold text-primary ">Envie d'échanger ?</h2>
-      <h2 className="scroll-m-20  pb-2  tracking-tight first:mt-0">
+      <h2 className="scroll-m-20  pb-2  tracking-tight first:mt-0 text-primary">
         Je serai ravi de discuter de vos projets, de répondre à vos questions,
         alors n'hésitez pas à me contacter !
       </h2>

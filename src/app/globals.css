@@ -4,7 +4,7 @@
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 231.43 30.43% 36.08%;
+  --foreground: 0 0% 0%;
   --muted: 212 5% 13%;
   --muted-foreground: 212 12% 73%;
   --popover: 212 33% 0%;
@@ -13,7 +13,7 @@
   --card-foreground: 231.29 30.29% 36.02%;
   --border: 212 9% 13%;
   --input: 212 9% 13%;
-  --primary: 212 70% 22%;
+  --primary: 0 0% 0%;
   --primary-foreground: 212 70% 82%;
   --secondary: 212 10% 9%;
   --secondary-foreground: 212 10% 69%;
@@ -28,6 +28,7 @@
   --chart-4: 212 10% 12%;
   --chart-5: 212 73% 22%;
   --radius: 0.5rem;
+  --badge: 220.85deg 73.95% 44.17%;
 }
 
 body {
