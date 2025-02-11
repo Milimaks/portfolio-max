@@ -40,17 +40,25 @@ export const Header: React.FC<HeaderProps> = ({ setIsCollapsibleOpen }) => {
           <SiteIcon size={48} />
         </Link>
 
-        <ul className="hidden sm:flex space-x-6 items-center font-heading">
+        <ul className="hidden sm:flex space-x-6 items-center font-heading ">
           <li>
-            <Link href="#about-me" onClick={() => setIsCollapsibleOpen(true)}>
+            <Link
+              href="#about-me"
+              onClick={() => setIsCollapsibleOpen(true)}
+              className="hover:text-primary/50"
+            >
               o A propos
             </Link>
           </li>
           <li>
-            <Link href="#work">o Projets</Link>
+            <Link href="#work" className="hover:text-primary/50">
+              o Projets
+            </Link>
           </li>
           <li>
-            <Link href="#contact">o Contact</Link>
+            <Link href="#contact" className="hover:text-primary/50">
+              o Contact
+            </Link>
           </li>
           <li>
             <a
