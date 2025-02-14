@@ -9,6 +9,7 @@ import { MyNetworks } from "./_components/MyNetworks";
 import { MyWorks } from "./_components/MyWorks";
 import { Spacing } from "./_components/Spacing";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { LoadingBar } from "./_components/LoadingBar";
 
 export default function Home() {
   const [isCollapsibleOpen, setIsCollapsibleOpen] = useState<boolean>(false);
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Header setIsCollapsibleOpen={setIsCollapsibleOpen} />
         <Spacing size="md" />
+        <LoadingBar nombre={8} />
         <Hero
           isCollapsibleOpen={isCollapsibleOpen}
           setIsCollapsibleOpen={setIsCollapsibleOpen}
