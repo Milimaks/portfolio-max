@@ -4,7 +4,7 @@ import { Modal } from "./Modal";
 interface ModalDetailProps {
   title: string;
   description: string;
-  images: { url: string; alt: string }[];
+  images?: { url: string; alt: string }[];
   isOpen: boolean;
   onClose: () => void;
 }
@@ -18,7 +18,7 @@ export const ModalDetail: React.FC<ModalDetailProps> = ({
 }) => (
   <Modal isOpen={isOpen} onClose={onClose}>
     <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">{title}</h2>
-    <Carousel images={images} />
+    {images && <Carousel images={images} />}
     <div className="mt-4 sm:mt-6 text-black">
       <p className="text-sm sm:text-base whitespace-pre-line">{description}</p>
     </div>

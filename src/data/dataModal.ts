@@ -107,4 +107,21 @@ Responsabilités principales :
       },
     ],
   },
+  airbus: {
+    title: "Développeur React  @ Airbus",
+    description: `Création d'une application de gestion de portefeuille client.
+
+Responsabilités principales :
+
+• Développement frontend
+- Composants en React / Typescript
+- Utilisation de Redux pour le state management
+- Back en Python 
+
+• Collaboration et suivi
+- Cahier des charges et spécifications techniques à respecter
+- Système de tickets et de suivi des tâches sur Jira
+- Versionning et gestion de code avec GitLab
+- Méthode de travail Agile Scrum avec des sprints de 2 semaines`,
+  },
 };
