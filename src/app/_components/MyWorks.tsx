@@ -73,7 +73,7 @@ export const MyWorks = () => {
             Front-End Développeur
           </h2>
           <p className="text-sm font-heading text-primary/50">
-            Novembre 2023 - Août 2024
+            Novembre 2023 - Novembre 2024
           </p>
           <button
             className="font-heading text-primary p-0 cursor-pointer hover:underline"
@@ -125,9 +125,30 @@ export const MyWorks = () => {
             Ingénieur en Technologie de l'information
           </h2>
           <p className="text-sm font-heading text-primary/50">
-            February 2023 - November 2023
+            Novembre 2022 - Novembre 2023
           </p>
 
+          <button
+            className="font-heading text-primary p-0 cursor-pointer hover:underline"
+            onClick={() => setSelectedMission("airbus")}
+          >
+            Airbus : Dashboard
+          </button>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="text-primary mr-2">▸</span>
+              <span className="text-primary">
+                Développement d'une application interne entreprise pour le suivi
+                de projet, notamment la partie financière
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">▸</span>
+              <span className="text-primary">
+                Développement de l'application desktop en React
+              </span>
+            </li>
+          </ul>
           <button
             className="font-heading text-primary p-0 cursor-pointer hover:underline"
             onClick={() => setSelectedMission("sncf_uas")}
