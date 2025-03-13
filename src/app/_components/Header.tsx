@@ -61,7 +61,7 @@ export const Header: React.FC<HeaderProps> = ({ setIsCollapsibleOpen }) => {
             </Link>
           </li>
           <li>
-            <a href="/CV - Maxime Faure - Developpeur JS.pdf">
+            <a href="/CV_Faure_Maxime_React.pdf" download="CV_Faure_Maxime">
               <Button
                 className="transition ease-in-out duration-300 hover:shadow-[0px_6px_0px_0px_black] hover:-translate-y-2"
                 variant={"normal"}
