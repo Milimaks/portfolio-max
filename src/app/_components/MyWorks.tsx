@@ -31,7 +31,7 @@ export const MyWorks = () => {
       content: (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold font-heading text-primary">
-            Développeur Fullstack - JavaScript / Typescript
+            Développeur React Node.js
           </h2>
           <p className="text-sm font-heading text-primary/50">
             Août 2024 - Aujourd'hui
@@ -70,7 +70,7 @@ export const MyWorks = () => {
       content: (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold font-heading text-primary">
-            Front-End Développeur
+            Développeur React Node.js
           </h2>
           <p className="text-sm font-heading text-primary/50">
             Novembre 2023 - Novembre 2024
@@ -193,6 +193,77 @@ export const MyWorks = () => {
             <PhpIcon size={30} />
             <JqueryIcon size={36} />
             <DockerIcon size={30} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: "04",
+      title: "8D Concept",
+      content: (
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold font-heading text-primary">
+            Développeur React Node.js
+          </h2>
+          <p className="text-sm font-heading text-primary/50">
+            Novembre 2020 - Novembre 2022
+          </p>
+
+          <button
+            className="font-heading text-primary p-0 cursor-pointer hover:underline"
+            onClick={() => setSelectedMission("HubeeConnect")}
+          >
+            HubeeConnect
+          </button>
+
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="text-primary  mr-2">▸</span>
+              <span className="text-primary">
+                Développement d'une plateforme de gestion de parc automobiles
+                communiquant avec une application mobile
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary  mr-2">▸</span>
+              <span className="text-primary">
+                Rédaction de la documentation technique pour faciliter la
+                maintenance et l’évolution de la plateforme.
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary  mr-2">▸</span>
+              <span className="text-primary">
+                Écriture de tests end-to-end avec Playwright pour assurer la
+                fiabilité et la stabilité de l’application.
+              </span>
+            </li>
+          </ul>
+          <h3 className="font-heading text-primary p-0">
+            Développement d’une application de gestion administrative
+          </h3>
+
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="text-primary  mr-2">▸</span>
+              <span className="text-primary">
+                Le développement de l’application desktop en React
+              </span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary  mr-2">▸</span>
+              <span className="text-primary">
+                Respect du Design System de la maquette Figma
+              </span>
+            </li>
+          </ul>
+          <Badge variant="outline">Skills</Badge>
+          <div className="flex items-center gap-4 text-black">
+            <ReactIcon size={30} />
+            <GraphQLIcon size={30} />
+            <TypescriptIcon size={30} />
+            <MUIIcon size={30} />
+            <PlaywrightIcon size={30} />
           </div>
         </div>
       ),
