@@ -124,4 +124,40 @@ Responsabilités principales :
 - Versionning et gestion de code avec GitLab
 - Méthode de travail Agile Scrum avec des sprints de 2 semaines`,
   },
+  "8DConcept": {
+    title: "Développeur Front-end @ HubeeConnect",
+    description: `En tant que développeur front-end, j'étais membre d'une équipe de trois développeurs front-end travaillant sur la version desktop de la solution.
+
+Responsabilités principales :
+
+• Développement de la partie Front-end du Saas HubeeConnect
+- Création d'interfaces utilisateur réactives et performantes en React / MUI
+- Rédaction de la documentation technique
+- Optimisation des performances (Memo, useMemo, useCallback, etc.)
+
+• Gestion des requêtes API
+- Utilisation de graphQL pour les requêtes et mutations
+- Utilisation de Apollo Client pour la gestion des données
+- State management avec useContext 
+
+• Gestion de projet
+- Utilisation de ClickUp pour la gestion des tâches
+- Méthode de travail Agile Scrum avec des sprints de 2 semaines
+- Utilisation de gitLab pour les merge requests et le versionning`,
+    images: [
+      {
+        url: "/Hubeecar_1.jpg",
+        alt: "Dashboard de l'application",
+      },
+
+      {
+        url: "/Hubeecar_3.jpg",
+        alt: "Dashboard de l'application",
+      },
+      {
+        url: "/Hubeecar_4.jpg",
+        alt: "Dashboard de l'application",
+      },
+    ],
+  },
 };
